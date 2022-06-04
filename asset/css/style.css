@@ -1,0 +1,110 @@
+/*mobil*/
+ html, body{
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 100px 1fr 80px;
+    grid-template-areas: 
+    "menu" 
+    "busqueda"
+    "main"
+    "footer";
+    min-height: 100%;
+}
+.menu{
+    background-color: yellow;
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0%;
+}
+.icono{
+    padding-right: 30px;
+}
+.filtro{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.lista{
+    display: none;
+}
+.busqueda{
+    background-color: greenyellow;
+    grid-area: busqueda;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.main{
+    background-color: aqua;
+    grid-area: main;
+}
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+.cartas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    border: 1px solid black;
+    align-items: center;
+    background-color: greenyellow;
+    margin: 10px;
+  }
+  .foto img {
+    width: 250px;
+    height: 350px;
+    margin: 10px 10px;
+  }
+.footer{
+    background-color: red;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+/*escritorio*/
+@media(min-width:992px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 90px 1fr 90px;
+        grid-template-areas: 
+        "menu busqueda"
+        "menu main"
+        "footer main";
+        min-height: 100%;
+    }
+    .menu{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px;
+        font-size: 35px;
+    }
+
+    .icono {
+        display: none;
+    }
+    .lista{
+        display: block;
+        
+    }
+    .filtro{
+        padding-left: 30rem;
+        padding-right: 30rem;
+}
+    }
+
